@@ -3,6 +3,8 @@ from django.contrib import messages
 from .models import Employee
 from .forms import EmployeeForm
 
+def home(request):
+    return render(request, "home.html", {})
 def add_employee(request):
     if request.method == 'POST':
         form = EmployeeForm(request.POST)

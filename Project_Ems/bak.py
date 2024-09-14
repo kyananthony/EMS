@@ -18,7 +18,6 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 
 
-
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/
 
@@ -29,7 +28,6 @@ SECRET_KEY = 'django-insecure-(u)7%05535c_)(a+pdl3#ok#z4!+2%kzj)%c_xxi+crdp6l^s=
 DEBUG = True
 
 ALLOWED_HOSTS = []
-
 
 # Application definition
 
@@ -52,7 +50,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'EMS.urls'
+ROOT_URLCONF = 'Project_Ems.urls'
 
 TEMPLATES = [
     {
@@ -71,7 +69,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'EMS.wsgi.application'
+WSGI_APPLICATION = 'Project_Ems.wsgi.application'
 
 
 # Database
@@ -122,11 +120,9 @@ USE_TZ = True
 STATIC_URL = 'static/'
 
 STATICFILES_DIRS = [BASE_DIR / 'static_my_project', ]
+STATIC_ROOT = BASE_DIR / 'static'
 
-STATIC_ROOT = os.path.join(BASE_DIR, "static", "static_root")
-
-
-MEDIA_URL = 'media/'
+MEDIA_URL = '/media/'
 
 MEDIA_ROOT = os.path.join(BASE_DIR, "static", "media_root")
 # Default primary key field type
